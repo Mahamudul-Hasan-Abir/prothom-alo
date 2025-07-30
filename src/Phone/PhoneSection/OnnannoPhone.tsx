@@ -55,7 +55,7 @@ const OnnannoPhone = () => {
   ];
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 mb-20">
       <div className="flex items-center gap-2 border-t-4 pt-4 border-gray-400">
         <p className="font-semibold text-2xl">অন্যান্য</p>
       </div>
