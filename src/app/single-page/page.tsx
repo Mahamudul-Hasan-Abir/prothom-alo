@@ -4,7 +4,10 @@ import SinglePageImage from "../../../public/assets/frontpageimages/singePage.pn
 import Iddris from "../../../public/assets/frontpageimages/iddris.png";
 import Iddris2 from "../../../public/assets/frontpageimages/iddriss3.png";
 import Priojon from "../../../public/assets/frontpageimages/priojon.png";
-import Footer from "../../../public/assets/frontpageimages/singleFooter.png";
+import Navy from "../../../public/assets/frontpageimages/navy.png";
+import UKren from "../../../public/assets/frontpageimages/ukren.png";
+import Russia from "../../../public/assets/frontpageimages/russia.png";
+
 import Subscribe from "../../../public/assets/frontpageimages/subscribe.png";
 
 import Image from "next/image";
@@ -12,8 +15,8 @@ import GoogleNewsIcon from "@/components/Footer/GoogleNewsIcon";
 const SinglePage = () => {
   return (
     <Container>
-      <div className="grid grid-cols-12 gap-5 justify-items-end">
-        <div className="lg:col-span-7 col-span-12">
+      <div className="grid grid-cols-12 gap-5 ">
+        <div className="lg:col-span-7 md:col-span-12 sm:col-span-12 col-span-12">
           <h4 className="text-[#0673e6] border-b-2 text-lg border-[#0673e6] font-semibold w-fit">
             বাংলাদেশ
           </h4>
@@ -226,6 +229,77 @@ const SinglePage = () => {
                 fill
                 className="object-fill"
               ></Image>
+            </div>
+          </div>
+        </div>
+        <div className="lg:col-span-5 md:col-span-12 sm:col-span-12 col-span-12">
+          <div className="xl:px-20  lg:px-10">
+            <div className="flex justify-start">
+              <h4 className="text-black border-b-2  border-black font-semibold w-fit">
+                রাশিয়া ইউক্রেন সংঘাত নিয়ে আরও পড়ুন
+              </h4>
+            </div>
+            <div className="mt-10 border-b pb-5">
+              <h3 className="font-semibold text-lg">
+                {" "}
+                পুতিনকে ট্রাম্পের নতুন সময়সীমার পরপরই রাশিয়ার হামলা, ইউক্রেনে
+                নিহত ২৫
+              </h3>
+              <div className="grid grid-cols-12 gap-2">
+                <p className="text-sm text-gray-500 col-span-8">
+                  ২৯ জুলাই ২০২৫
+                </p>
+                <div className="lg:h-[77px] md:h-[191px] h-[100px] relative col-span-4 w-full">
+                  <Image
+                    src={Russia}
+                    alt="Iddris"
+                    fill
+                    className="object-cover"
+                  ></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="xl:px-20  lg:px-10">
+            <div className="mt-10 border-b pb-5">
+              <h3 className="font-semibold text-lg">
+                {" "}
+                জেলেনস্কির মসনদ নাড়িয়ে দিয়েছে যে আন্দোলন
+              </h3>
+              <div className="grid grid-cols-12 gap-2">
+                <p className="text-sm text-gray-500 col-span-8">
+                  ২৮ জুলাই ২০২৫
+                </p>
+                <div className="lg:h-[77px] md:h-[191px] h-[100px] relative col-span-4 w-full">
+                  <Image
+                    src={UKren}
+                    alt="Iddris"
+                    fill
+                    className="object-cover"
+                  ></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="xl:px-20  lg:px-10">
+            <div className="mt-10 border-b pb-5">
+              <h3 className="font-semibold text-lg">
+                {" "}
+                ‘নিরাপত্তার কারণে’ নৌবাহিনীর বার্ষিক কুচকাওয়াজ বাতিল রাশিয়ার
+              </h3>
+              <div className="grid grid-cols-12 gap-2">
+                <p className="text-sm text-gray-500 col-span-8">
+                  ২৭ জুলাই ২০২৫
+                </p>
+                <div className="lg:h-[77px] md:h-[191px] h-[100px] relative col-span-4 w-full">
+                  <Image
+                    src={Navy}
+                    alt="Iddris"
+                    fill
+                    className="object-cover"
+                  ></Image>
+                </div>
+              </div>
             </div>
           </div>
         </div>
