@@ -1,0 +1,60 @@
+import Image, { StaticImageData } from "next/image";
+
+interface BiSectionProps {
+  LeftImage: StaticImageData | string;
+  LeftTitle: string;
+  LeftTime: string;
+  LeftAlt?: string;
+  RightImage: StaticImageData | string;
+  RightTitle: string;
+  RightTime: string;
+  RightAlt?: string;
+}
+
+const BiSection = ({
+  LeftImage,
+  LeftTitle,
+  LeftTime,
+  LeftAlt,
+  RightImage,
+  RightTitle,
+  RightTime,
+  RightAlt,
+}: BiSectionProps) => {
+  return (
+    <div className="mt-20">
+      <div className="grid grid-cols-12 gap-2 border-t pt-5">
+        <div className="col-span-6 border-r  md:pr-2">
+          <div className="h-[180.5px] md:h-[352px] aspect-square relative">
+            <Image
+              src={LeftImage}
+              alt={LeftAlt || "bi-section-left"}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="mt-4 max-w-[180.5px] md:max-w-[352px]">
+            <h3 className="font-semibold text-lg ">{LeftTitle}</h3>
+            <p className="text-gray-500 text-sm mt-3">{LeftTime}</p>
+          </div>
+        </div>
+        <div className="col-span-6">
+          <div className="h-[180.5px] md:h-[352px] aspect-square relative">
+            <Image
+              src={RightImage}
+              alt={RightAlt || "bi-section-right"}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="mt-4 max-w-[180.5px] md:max-w-[352px]">
+            <h3 className="font-semibold text-lg">{RightTitle}</h3>
+            <p className="text-gray-500 text-sm mt-3">{RightTime}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BiSection;
